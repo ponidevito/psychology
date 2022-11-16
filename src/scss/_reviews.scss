@@ -1,0 +1,137 @@
+.section {
+  &__reviews {
+    padding-bottom: 145px;
+    @include lg {
+      padding-bottom: 50px;
+    }
+    @include sm {
+      padding-bottom: 35px;
+    }
+    &.reviews__page {
+      @include lg {
+        padding-bottom: 0px;
+      }
+    }
+  }
+}
+
+.reviews {
+  &__title {
+    margin-bottom: 140px;
+    @media (max-width: 1200px) {
+      margin-bottom: 75px;
+    }
+    @include lg {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slider {
+    text-align: center;
+  }
+}
+
+.swiper {
+  &__reviews {
+    padding: 40px 0px !important;
+    transition: 0.3s;
+    @include md {
+      padding: 0px !important;
+    }
+    .swiper-wrapper {
+      padding-bottom: 150px;
+      @media (max-width: 1200px) {
+        padding-bottom: 100px;
+      }
+      @include lg {
+        padding-bottom: 50px;
+      }
+      @include md {
+        padding-bottom: 70px;
+      }
+    }
+    .swiper-slide {
+      cursor: pointer;
+      transform: scale(1);
+      transition: 0.3s;
+    }
+    .swiper-slide-active {
+      transition: 0.3s;
+      .container {
+        transform: scale(1.3);
+        transition: 0.3s;
+        @media (max-width: 1350px) {
+          transform: scale(1.1);
+        }
+        @media (max-width: 1250px) {
+          transform: scale(1);
+        }
+      }
+    }
+    .slide {
+      &__swiper-image {
+        max-width: 100%;
+        @media (max-width: 650px) {
+          width: 100%;
+        }
+      }
+    }
+    .swiper-pagination-bullet {
+      transition: 0.3s ease;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(
+          180deg,
+          rgba(247, 151, 129, 0.2) 0%,
+          rgba(242, 218, 213, 0) 100%
+        ),
+        rgba(247, 151, 129, 0.7);
+    }
+    .swiper-pagination-bullet-active {
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(247, 151, 129, 0.2) 0%,
+          rgba(242, 218, 213, 0) 100%
+        ),
+        #f79781;
+    }
+    .swiper-pagination {
+      height: 30px;
+      gap: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.fancybox-content {
+  width: 570px;
+  height: 505px;
+}
+
+.fancybox-image {
+  cursor: zoom-in;
+  overflow: hidden;
+  transition: 0.5s ease;
+  @media (max-width: 1150px) {
+    max-width: 100%;
+    width: 100%;
+    padding: 0px 112px;
+    object-fit: contain;
+  }
+  @media (max-width: 650px) {
+    padding: 0px 20px;
+  }
+}
+.fancybox-button {
+  @media (max-width: 650px) {
+    display: none;
+  }
+}
+
+[data-fancybox="gallery"]:focus-visible {
+  outline: none;
+}

@@ -1,0 +1,108 @@
+.section {
+  &__reasons {
+    padding-bottom: 150px;
+    @include lg {
+      padding-bottom: 50px;
+    }
+    @include sm {
+      padding-bottom: 35px;
+    }
+  }
+}
+.reasons {
+  &__title {
+    display: flex;
+    span {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 110px;
+      line-height: 50%;
+      color: $colorOrange;
+    }
+    margin-bottom: 90px;
+    @include lg {
+      margin-bottom: 50px;
+    }
+    @include sm {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    &:last-child {
+      gap: 40px;
+      display: flex;
+      justify-content: center;
+      @include sm {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @include md {
+        margin-bottom: 20px;
+      }
+    }
+    @include lg {
+      gap: 20px;
+    }
+    @include md {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__column {
+    background: #f9fafb;
+    padding: 32px 32px 85px;
+    @include lg {
+      padding: 15px 15px 35px;
+    }
+    &.column-last {
+      width: 473px;
+      @include sm {
+        width: 100%;
+      }
+    }
+  }
+
+  &__colum-icon {
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+    width: 75px;
+    height: 75px;
+    @include lg {
+      padding-bottom: 5px;
+    }
+    svg {
+      @include lg {
+        width: 40px;
+      }
+    }
+    img {
+      @include lg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__colum-text {
+    text-align: center;
+    font-family: "Cormorant";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 127%;
+    color: $secondary;
+    @include lg {
+      font-size: 20px;
+      line-height: 110%;
+    }
+  }
+}

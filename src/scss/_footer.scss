@@ -1,0 +1,256 @@
+.footer {
+  padding: 50px 0px;
+
+  &__row {
+    position: relative;
+    display: flex;
+    padding: 00px 0px 20px 0px;
+    @media (max-width: 1100px) {
+      justify-content: space-between;
+    }
+    @include md {
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  &__column {
+    flex: 0 1 20%;
+    &:first-child {
+      flex: 0 1 30%;
+    }
+    &:nth-child(2) {
+      padding-right: 80px;
+      @media (max-width: 1100px) {
+        padding-right: 0px;
+      }
+    }
+    &:last-child {
+      flex: 0 1 70%;
+      @include xs {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    padding-top: 40px;
+    gap: 40px;
+    @include md {
+      padding-top: 90px;
+    }
+    @include xs {
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+    @media (max-width: 1100px) {
+      transform: translate3d(-27px, 0.01%, 0) scale(0.8);
+      margin-bottom: 0px;
+    }
+    @include md {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__menu {
+    @include xs {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__social {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    @include lg {
+      gap: 15px;
+    }
+    @include xs {
+      margin-top: 0px;
+    }
+  }
+  &__button {
+    display: flex;
+
+    @include sm {
+      justify-content: center;
+    }
+    .footer-btn {
+      @include sm {
+        font-size: 16px;
+        padding: 0px 50px;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.contacts-footer {
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    &:hover {
+      .contacts-footer__icon {
+        rect {
+          fill: $colorblueLight;
+        }
+
+        .location-icon {
+          fill: $colorblueLight;
+        }
+      }
+    }
+    svg {
+      transition: 0.3s ease;
+
+      path {
+        transition: 0.3s ease;
+      }
+      rect {
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    @include lg {
+      width: 23px;
+      height: 23px;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 159%;
+    color: $secondary;
+    position: relative;
+    span {
+      font-weight: 700;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: 0;
+      bottom: -10px;
+      width: 0;
+      background-color: #98c5eb;
+      transition: 0.3s ease;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    @media (max-width: 1100px) {
+      font-size: 18px;
+      line-height: 130%;
+    }
+    @include lg {
+      font-size: 16px;
+      line-height: 110%;
+    }
+  }
+}
+.menu-footer {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: inline-flex;
+    &:not(:last-child) {
+      margin-bottom: 25px;
+      @include lg {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: $primary;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: 0;
+      bottom: -10px;
+      width: 0;
+      background-color: #98c5eb;
+      transition: 0.3s ease;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    &.link__pay {
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+    }
+    &.link-specialists {
+      font-weight: 700;
+    }
+    @media (max-width: 1100px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    @include lg {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    padding-left: 15px;
+  }
+}
+
+.social {
+  &__item {
+    &:hover {
+      rect {
+        fill: $colorblueLight;
+      }
+
+      .viber {
+        fill: $colorblueLight;
+      }
+    }
+    svg {
+      transition: 0.3s ease;
+
+      .viber {
+        transition: 0.3s ease;
+      }
+      rect {
+        transition: 0.3s ease;
+      }
+    }
+  }
+}

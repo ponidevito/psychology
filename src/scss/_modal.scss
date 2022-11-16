@@ -1,0 +1,257 @@
+.modal__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(179, 204, 211, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  display: none;
+  padding: 0px 15px;
+  .modal {
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    width: 600px;
+    animation: fade 0.3s linear;
+    @include sm {
+      padding: 10px;
+    }
+    &__close {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      img {
+        &:hover {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    &__title {
+      font-family: "Cormorant";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 55px;
+      color: $primary;
+      @include md {
+        line-height: 30px;
+        font-size: 22px;
+      }
+    }
+    &__subtitle {
+      line-height: 55px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+        @include md {
+          margin-bottom: 0px;
+        }
+      }
+      @include md {
+        line-height: 24px;
+      }
+    }
+    &__body {
+      @include md {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.form {
+  &__input {
+    padding-left: 30px;
+    width: 100%;
+    min-height: 70px;
+    border: 1px solid #99c1e2;
+    border-radius: 150px;
+    &::placeholder {
+      font-size: 14px;
+      color: #d3dde6;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &:nth-child(1) {
+      margin-bottom: unset;
+    }
+    @include md {
+      min-height: 50px;
+    }
+  }
+  &__label {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include md {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  &__verif {
+    position: absolute;
+    display: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 50%;
+    left: 30px;
+    transform: translate(0, -50%);
+    height: 44px;
+    background-color: #99c1e2;
+    color: $colorWhite;
+    animation: fade 0.3s ease;
+    &._active {
+      display: flex;
+      align-items: center;
+    }
+    @include md {
+      height: 30px;
+    }
+    @include xs {
+      left: 10px;
+    }
+  }
+}
+.modal-submit {
+  @include md {
+    font-size: 16px;
+    line-height: 30px;
+    justify-content: center;
+  }
+}
+
+// modal second
+
+.modal {
+  &__wrapper-second {
+    padding: 0px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(179, 204, 211, 0.8);
+    z-index: 10;
+
+    display: none;
+    &._active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title-second {
+    font-family: "Cormorant";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 55px;
+    color: $primary;
+  }
+
+  &__subtitle-second {
+    line-height: 55px;
+    @include md {
+      line-height: 30px;
+    }
+  }
+}
+.modal-second {
+  background: white;
+  padding: 25px;
+  border-radius: 5px;
+  width: 600px;
+  animation: fade 0.3s linear;
+}
+
+//modal footer
+
+.modal__wrapper-footer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(179, 204, 211, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  display: none;
+  padding: 0px 15px;
+  .modal {
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    width: 600px;
+    animation: fade 0.3s linear;
+    @include sm {
+      padding: 10px;
+    }
+
+    &__close-footer {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      img {
+        &:hover {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    &__title-footer {
+      font-family: "Cormorant";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 55px;
+      color: $primary;
+      @include md {
+        line-height: 30px;
+        font-size: 22px;
+      }
+    }
+    &__subtitle-footer {
+      line-height: 55px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+        @include md {
+          margin-bottom: 0px;
+        }
+      }
+      @include md {
+        line-height: 24px;
+      }
+    }
+    &__body-footer {
+      @include md {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

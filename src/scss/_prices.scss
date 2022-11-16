@@ -1,0 +1,213 @@
+.section {
+  &__prices {
+    padding-bottom: 155px;
+    @include lg {
+      padding-bottom: 50px;
+    }
+    @include sm {
+      padding-bottom: 25px;
+    }
+  }
+}
+.prices {
+  &__title {
+    padding-bottom: 90px;
+    @include lg {
+      padding-bottom: 50px;
+    }
+    @include sm {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.swiper {
+  &__prices {
+    .swiper-wrapper {
+      margin-bottom: 110px;
+      @include lg {
+        margin-bottom: 80px;
+      }
+      @include md {
+        margin-bottom: 50px;
+      }
+    }
+
+    .slide {
+      &__item {
+        cursor: pointer;
+        height: auto;
+        opacity: 0.7;
+        position: relative;
+        padding: 0px 25px 35px 35px;
+        background: rgba(211, 221, 230, 0.4);
+        &:hover {
+          opacity: 1;
+        }
+        @include xs {
+          opacity: 1;
+        }
+        @include xs {
+          padding: 0px 15px 15px 15px;
+        }
+      }
+
+      &__item-title {
+        padding-top: 70px;
+        padding-bottom: 45px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        color: $secondary;
+        span {
+          color: #d3dde6;
+        }
+        @include lg {
+          font-size: 24px;
+          line-height: 30px;
+          padding-bottom: 15px;
+        }
+        @include xs {
+          font-size: 20px;
+          line-height: 24px;
+          padding-bottom: 10px;
+          padding-top: 40px;
+        }
+      }
+
+      &__item-text {
+        font-size: 20px;
+        line-height: 190%;
+        color: $secondary;
+        padding: 20px 0px 20px 45px;
+        @include lg {
+          font-size: 18px;
+          line-height: 170%;
+          padding: 15px 0px 15px 45px;
+        }
+        @include xs {
+          font-size: 16px;
+          line-height: 100%;
+          padding: 15px 0px 15px 30px;
+        }
+      }
+
+      &__item-icon {
+        background-image: url("../img/prices/checkmark.svg");
+        background-repeat: no-repeat;
+        background-position: left;
+        @include xs {
+          background-size: 20px;
+        }
+      }
+
+      &__item-price-ofline {
+        font-family: "Arsenal";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 75px;
+        color: $colorOrange;
+        @include lg {
+          font-size: 40px;
+          line-height: 50px;
+        }
+      }
+
+      &__item-button {
+        padding: 0 35px;
+        min-height: 50px;
+        font-size: 20px;
+        @include xs {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      &__item-time {
+        position: absolute;
+        top: 20px;
+        right: 23px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        color: #d3dde6;
+        @include lg {
+          font-size: 24px;
+          line-height: 30px;
+        }
+        @include xs {
+          font-size: 20px;
+          top: 5px;
+        }
+      }
+
+      &__item-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        @include xs {
+          margin-bottom: 10px;
+        }
+      }
+
+      &__item-box-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__item-price-online {
+        font-family: "Arsenal";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 75px;
+        color: $primary;
+        @include lg {
+          font-size: 40px;
+          line-height: 50px;
+        }
+      }
+
+      &__item-class {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: $primary;
+      }
+      &__item-button-box {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .swiper-pagination-bullet {
+      transition: 0.3s ease;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(
+          180deg,
+          rgba(247, 151, 129, 0.2) 0%,
+          rgba(242, 218, 213, 0) 100%
+        ),
+        rgba(247, 151, 129, 0.7);
+    }
+    .swiper-pagination-bullet-active {
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(247, 151, 129, 0.2) 0%,
+          rgba(242, 218, 213, 0) 100%
+        ),
+        #f79781;
+    }
+    .swiper-pagination {
+      height: 30px;
+      gap: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

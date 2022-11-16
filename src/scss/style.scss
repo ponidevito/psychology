@@ -1,0 +1,87 @@
+// Global SCSS-files imports
+@import "./mixins";
+@import "./vars";
+@import "./reset";
+@import "./fonts";
+@import "./global";
+
+// Sections or Pages SCSS-files imports
+@import "./header";
+
+@import "./modal";
+@import "./headerMain";
+@import "./when-contactus";
+@import "./why-we";
+@import "./specialist";
+@import "./services";
+@import "./accordion";
+@import "./we-work";
+@import "./prices";
+@import "./we-offer";
+@import "./consultation";
+@import "./customers";
+@import "./reviews";
+@import "./contacts";
+
+// page about
+@import "./reasons";
+@import "./specialists-about";
+
+// page services
+@import "./consultation-services";
+
+// page seminars
+@import "./buy";
+
+@import "./footer";
+
+// Libs
+@import "./libs/swiper";
+
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+  font-family: Montserrat;
+  color: $primary;
+  line-height: 55px;
+  background-color: #ffffff;
+}
+
+.header * {
+  transition: all 0.3s ease;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.main {
+  flex: 1 1 auto;
+  transition: all 0.3s ease;
+}
+.page-contacts-main {
+  padding-top: 340px;
+  @media (max-width: 1200px) {
+    padding-top: 280px;
+  }
+  @include lg {
+    padding-top: 120px;
+  }
+}
+.page-price-main,
+.page-seminars-main,
+.page-reviews-main,
+.page-pay-main {
+  padding-top: 340px;
+  @media (max-width: 1200px) {
+    padding-top: 280px;
+  }
+  @include lg {
+    padding-top: 120px;
+  }
+}

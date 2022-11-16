@@ -1,0 +1,205 @@
+.section {
+  &__offer {
+    padding-bottom: 150px;
+    @include lg {
+      padding-bottom: 50px;
+    }
+    @include sm {
+      padding-bottom: 25px;
+    }
+  }
+}
+.offer {
+  &__title {
+    padding-bottom: 70px;
+    @include lg {
+      padding-bottom: 50px;
+    }
+    @include sm {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    padding-bottom: 50px;
+    color: $secondary;
+    @include sm {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    @include lg {
+      gap: 20px;
+    }
+    @include md {
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  &__item {
+    flex: 0 1 50%;
+    @include md {
+      flex: 1 1 100%;
+    }
+    &:last-child {
+      text-align: end;
+      @include md {
+        text-align: center;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 35px;
+    color: $secondary;
+    margin-bottom: 30px;
+    max-width: 680px;
+    @media (max-width: 1200px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    @include lg {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+    @include md {
+      max-width: 100%;
+    }
+  }
+
+  &__list {
+    margin-bottom: 50px;
+    @media (max-width: 1200px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list-item {
+    padding-left: 60px;
+    font-size: 20px;
+    line-height: 24px;
+    color: $secondary;
+    padding: 20px 0px 20px 60px;
+    @media (max-width: 1200px) {
+      font-size: 18px;
+      padding: 15px 0px 15px 40px;
+    }
+    @include lg {
+      font-size: 16px;
+      padding: 10px 0px 10px 40px;
+    }
+  }
+
+  &__list-icon {
+    background-image: url("../img/we-offer/checkmark.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 40px;
+    @media (max-width: 1200px) {
+      background-size: 30px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    @media (max-width: 1200px) {
+      min-height: 70px;
+      font-size: 20px;
+    }
+    @include lg {
+      min-height: 70px;
+      font-size: 18px;
+      padding: 0px 50px;
+    }
+    @include xs {
+      width: 100%;
+      justify-content: center;
+      font-size: 16px;
+      min-height: 50px;
+    }
+    &::after {
+      content: "";
+      background-image: url("../img/we-offer/Arrow.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      right: -130px;
+      width: 100px;
+      height: 60px;
+
+      @media (max-width: 1200px) {
+        width: 60px;
+        right: -70px;
+        background-size: 60px;
+      }
+      @include md {
+        right: -130px;
+        top: 10%;
+        width: 100px;
+        background-size: 100px;
+      }
+      @include xs {
+        display: none;
+      }
+    }
+  }
+
+  &__box-text {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    @include md {
+      justify-content: center;
+    }
+    @include xs {
+      margin-top: 15px;
+      justify-content: center;
+    }
+  }
+  &__box-info {
+    font-size: 20px;
+    line-height: 24px;
+    color: $secondary;
+  }
+
+  &__box-price {
+    font-family: "Arsenal";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 75px;
+    color: $colorOrange;
+    @media (max-width: 1200px) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  &__image {
+    border-radius: 0px 0px 400px 0px;
+    height: 555px;
+    @media (max-width: 1200px) {
+      max-width: 450px;
+    }
+    @include lg {
+      object-fit: cover;
+      max-width: 85%;
+      max-height: 460px;
+    }
+    @include md {
+      max-width: 100%;
+      width: 100%;
+    }
+    @include sm {
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,345 @@
+.section {
+  &__consultation {
+    padding-bottom: 150px;
+    @include lg {
+      padding-bottom: 50px;
+    }
+    @include sm {
+      padding-bottom: 25px;
+    }
+  }
+}
+.consultation {
+  &__title {
+    padding-bottom: 165px;
+    @include lg {
+      padding-bottom: 50px;
+    }
+    @include sm {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+    @include md {
+      flex-direction: column;
+    }
+
+    &:last-child {
+      @include md {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__item {
+    padding: 75px 65px 65px 65px;
+    height: auto;
+    flex: 0 1 600px;
+    background: #f9fafb;
+    box-shadow: 3px 3px 6px rgba(203, 177, 160, 0.04);
+    position: relative;
+    @media (max-width: 1520px) {
+      flex: 0 0 40%;
+    }
+    @include lg {
+      padding: 35px 35px 35px 35px;
+    }
+    @include md {
+      flex: 1 1 100%;
+      padding: 45px 18px 26px 18px;
+      &:not(:last-child) {
+        margin-bottom: 58px;
+      }
+    }
+    &.first-reverse {
+      @include md {
+        margin-bottom: 58px;
+        margin-left: auto;
+        max-width: calc(100% - 40px);
+      }
+    }
+    &.second-reverse {
+      @include md {
+        margin-bottom: 0px;
+        margin-right: auto;
+        max-width: calc(100% - 40px);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -25px;
+      left: 0;
+      font-weight: 700;
+      font-size: 110px;
+      line-height: 55px;
+      color: #d3dde6;
+      @media (max-width: 1520px) {
+        font-size: 80px;
+        line-height: 45px;
+      }
+      @include lg {
+        font-size: 50px;
+        line-height: 35px;
+        top: -15px;
+      }
+    }
+    &.item__first {
+      &:nth-child(1) {
+        height: 500px;
+        @media (max-width: 1520px) {
+          height: auto;
+          text-align: center;
+        }
+        @include md {
+          max-width: calc(100% - 40px);
+          margin-left: auto;
+        }
+        @include xs {
+          max-width: calc(100% - 20px);
+        }
+        &::before {
+          content: "01";
+          top: -30px;
+          left: 0;
+          @media (max-width: 1520px) {
+            font-size: 80px;
+            line-height: 45px;
+            top: -25px;
+          }
+          @include lg {
+            font-size: 50px;
+            line-height: 35px;
+            top: -15px;
+          }
+          @include md {
+            left: -25px;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 155px;
+          left: calc(100% + 45px);
+          background-image: url("../img/consultation/Arrow01.svg");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          width: 180px;
+          height: 100px;
+          @media (max-width: 1520px) {
+            transform: scale(0.5);
+          }
+          @include lg {
+            left: calc(100% - 40px);
+          }
+          @include md {
+            top: 93%;
+            background-image: url(../img/consultation/Arrow03-3.svg);
+            background-size: 16%;
+            width: 170px;
+            height: 100px;
+            bottom: 0;
+            left: -60px;
+          }
+        }
+      }
+      &:nth-child(2) {
+        margin-bottom: 220px;
+        margin-top: 40px;
+        height: 350px;
+        @media (max-width: 1520px) {
+          margin-bottom: 120px;
+        }
+        @include lg {
+          height: auto;
+        }
+        @include md {
+          margin-top: 0px;
+          margin-bottom: 60px;
+          max-width: calc(100% - 40px);
+          margin-right: auto;
+        }
+
+        @include xs {
+          max-width: calc(100% - 20px);
+        }
+
+        &::before {
+          content: "02";
+          @include md {
+            right: -25px;
+            left: unset;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 20px;
+          bottom: calc(-50% + 30px);
+          background-image: url("../img/consultation/Arrow01.svg");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          width: 180px;
+          height: 100px;
+          transform: rotate(101.32deg);
+          @media (max-width: 1520px) {
+            transform: scale(0.5) rotate(101.32deg);
+            bottom: calc(-40% + 30px);
+          }
+          @include lg {
+            bottom: calc(-40% + 20px);
+          }
+          @include md {
+            top: 99%;
+            background-image: url("../img/consultation/Arrow02-2.svg");
+            background-size: 24%;
+            width: 60px;
+            height: 60px;
+            transform: rotate(0);
+            right: -20px;
+            background-position: right;
+          }
+        }
+      }
+    }
+
+    &.item__second {
+      &:first-child {
+        margin-top: 50px;
+        height: 350px;
+        @include lg {
+          height: auto;
+          margin-top: 25px;
+        }
+        @include md {
+          margin-top: 0;
+          max-width: calc(100% - 40px);
+          margin-right: auto;
+        }
+        @include xs {
+          max-width: calc(100% - 20px);
+        }
+
+        &::before {
+          content: "04";
+          @include md {
+            right: -25px;
+            left: unset;
+          }
+        }
+      }
+      &:last-child {
+        height: 380px;
+        margin-right: 85px;
+        @media (max-width: 1200px) {
+          margin-right: 0px;
+        }
+        @include lg {
+          height: auto;
+        }
+        @include md {
+          max-width: calc(100% - 40px);
+        }
+        @include xs {
+          max-width: calc(100% - 20px);
+        }
+        &::before {
+          content: "03";
+          left: -25px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 155px;
+          right: calc(100% + 10px);
+          background-image: url("../img/consultation/Arrow03.svg");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          width: 180px;
+          height: 100px;
+          @media (max-width: 1520px) {
+            transform: scale(0.5);
+          }
+          @include lg {
+            top: 100px;
+            right: calc(100% - 40px);
+          }
+          @include md {
+            top: 93%;
+            background-image: url(../img/consultation/Arrow03-3.svg);
+            background-size: 16%;
+            width: 170px;
+            height: 100px;
+            bottom: 0;
+            left: -60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.item {
+  &__consultation-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 55px;
+    color: $secondary;
+    margin-bottom: 25px;
+    @media (max-width: 1520px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    @include xs {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__consultation-subtitle {
+    text-align: center;
+    font-size: 22px;
+    line-height: 32px;
+    color: $secondary;
+    margin-bottom: 25px;
+    @media (max-width: 1520px) {
+      font-size: 18px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &.first-text {
+      max-width: 417px;
+      @media (max-width: 1200px) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__consultation-button {
+    min-height: 120px;
+    @media (max-width: 1520px) {
+      font-size: 18px;
+      min-height: 80px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 16px;
+      min-height: 70px;
+      line-height: 24px;
+      padding: 0px 25px;
+    }
+    @include md {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

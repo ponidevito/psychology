@@ -1,0 +1,176 @@
+// scroll burger off
+
+//body lock
+._lock {
+  overflow: hidden;
+}
+
+// global container
+
+[class*="__container"] {
+  max-width: 1485px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+
+// image ibg
+._ibg {
+  position: relative;
+}
+
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+//button
+
+.global-blue-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  background: radial-gradient(
+      62.25% 62.25% at 50% 50%,
+      rgba(83, 103, 121, 0.2) 0%,
+      rgba(211, 221, 230, 0.174) 100%
+    ),
+    #98c5eb;
+  box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+  border-radius: 150px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 55px;
+  color: $colorWhite;
+  transition: 0.3s ease;
+  &:hover {
+    background-color: $hoverBtn;
+  }
+}
+
+.global-orange-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 65px;
+  min-height: 100px;
+  background: #f79781;
+  box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+  border-radius: 150px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 55px;
+  color: $colorWhite;
+  transition: 0.3s ease;
+  &:hover {
+    background-color: #ff7657;
+  }
+}
+
+.topBox {
+  opacity: 0;
+  position: fixed;
+  width: 87px;
+  height: 87px;
+  background: $colorblueLight;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 40px;
+  bottom: 100px;
+  transition: 0.5s ease;
+
+  &:hover {
+    background-color: #76b6ea;
+  }
+  &._active {
+    z-index: 22;
+    opacity: 0.7;
+  }
+  @media (max-width: 1200px) {
+    width: 57px;
+    height: 57px;
+    right: 70px;
+    bottom: 70px;
+  }
+  @include lg {
+    width: 40px;
+    height: 40px;
+    right: 40px;
+    bottom: 40px;
+  }
+  @include sm {
+    right: 20px;
+  }
+  svg {
+    @media (max-width: 1200px) {
+      width: 15px;
+      height: 30px;
+    }
+    @include lg {
+      width: 15px;
+      height: 25px;
+    }
+  }
+}
+
+//link pay
+.link__pay {
+  font-weight: 700;
+  color: #536779;
+}
+
+// title
+
+.title {
+  font-family: "Cormorant";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 92%;
+  color: $primary;
+  @include lg {
+    font-size: 40px;
+  }
+  @include md {
+    font-size: 30px;
+  }
+  @include xs {
+    font-size: 27px;
+  }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fancybox-zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fancybox-zoomOut {
+  to {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+}

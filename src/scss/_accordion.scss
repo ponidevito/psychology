@@ -1,0 +1,111 @@
+.accordion {
+  border-left: 3px solid #d3dde6;
+  transition: 0.3s ease;
+  .accordion__item {
+    border-bottom: 3px solid #d3dde6;
+    opacity: 0.5;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: 6px;
+      height: 0px;
+      transition: 0.3s ease;
+    }
+
+    &.accordion__item-active {
+      opacity: 1;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -4px;
+        width: 6px;
+        height: 93px;
+        background-color: $colorOrange;
+        border-radius: 50px;
+      }
+      .accordion__item-content {
+        display: block;
+      }
+    }
+
+    .accordion__item-trigger {
+      display: flex;
+      padding: 29px 0;
+      align-items: center;
+      cursor: pointer;
+      @media (max-width: 1350px) {
+        padding: 12px 0;
+      }
+
+      .trigger__text {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 183%;
+        letter-spacing: 0.035em;
+        margin-left: 35px;
+        color: $secondary;
+        @media (max-width: 1250px) {
+          font-size: 24px;
+        }
+        @include sm {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .accordion__item-content {
+      padding-bottom: 20px;
+      display: none;
+      animation: fade 0.3s ease;
+      @include sm {
+        padding-bottom: 0px;
+      }
+
+      .content__text {
+        font-size: 22px;
+        line-height: 35px;
+        margin-bottom: 35px;
+        padding-left: 35px;
+        color: $secondary;
+        @media (max-width: 1150px) {
+          font-size: 20px;
+        }
+        @include sm {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 15px;
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      .content__price {
+        padding-left: 35px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 117%;
+        color: $secondary;
+        padding-bottom: 50px;
+        @media (max-width: 1150px) {
+          padding-bottom: 12px;
+        }
+        @include sm {
+          font-size: 25px;
+          padding-bottom: 15px;
+        }
+        span {
+          font-family: "Arsenal";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}

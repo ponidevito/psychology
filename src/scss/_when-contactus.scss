@@ -1,0 +1,200 @@
+.section {
+  &__when {
+    position: relative;
+    padding: 150px 0px;
+    @include lg {
+      padding: 100px 0px;
+    }
+    @include md {
+      padding: 270px 0px 50px 0px;
+    }
+    @include xs {
+      padding: 230px 0px 50px 0px;
+    }
+  }
+}
+.when {
+  &__title {
+    margin-bottom: 80px;
+    @include lg {
+      margin-bottom: 30px;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      @include lg {
+        margin-bottom: 40px;
+      }
+    }
+    &.item-last {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    @include lg {
+      flex-wrap: wrap;
+    }
+    &.content-reverse {
+      background: #f9fafb;
+      flex-direction: row-reverse;
+      border-radius: 0px 400px 0px 0px;
+      @include lg {
+        border-radius: unset;
+        margin: 0px -15px;
+        padding: 0px 15px;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    border-radius: 400px 0px 0px 0px;
+    &.image-reverse {
+      border-radius: 0px 400px 0px 0px;
+      @include lg {
+        border-radius: 400px 0px 0px 400px;
+      }
+    }
+
+    @include lg {
+      border-radius: 0px 400px 400px 0px;
+      filter: grayscale(1);
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+    @include md {
+      max-width: 250px;
+    }
+  }
+
+  &__cuestion {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 55px;
+    color: $secondary;
+    margin-bottom: 50px;
+    @include lg {
+      text-align: center;
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__subcuestion {
+    max-width: 590px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    color: $secondary;
+    position: relative;
+    padding-left: 60px;
+    @media (max-width: 1200px) {
+      max-width: 100%;
+    }
+    @include lg {
+      font-size: 16px;
+      line-height: 20px;
+      padding-left: 50px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 0px;
+      width: 45px;
+      height: 3px;
+      background-color: #d3dde6;
+      @include lg {
+        width: 20px;
+      }
+    }
+
+    &.subcuestion-last {
+      &::after {
+        content: "";
+        background-image: url("../img/when-contactus/Arrow.svg");
+        position: absolute;
+        width: 60px;
+        height: 115px;
+        background-repeat: no-repeat;
+        top: 120%;
+        right: 22%;
+        background-size: 100%;
+        @include sm {
+          top: 100%;
+          width: 40px;
+          height: 70px;
+        }
+      }
+    }
+  }
+
+  &__contactBox {
+    max-width: 1030px;
+    background: #f9fafb;
+    box-shadow: 3px 3px 6px rgba(203, 177, 160, 0.04);
+    border-radius: 0px;
+  }
+  &__text {
+    padding: 0px 100px 0px 177px;
+    display: flex;
+    flex-direction: column;
+
+    &.text-last {
+      padding: 0px 245px 0px 177px;
+      @media (max-width: 1200px) {
+        padding: 0 30px 0 50px;
+      }
+      @include lg {
+        padding: 0;
+      }
+    }
+    @media (max-width: 1200px) {
+      padding: 0px 30px 0px 50px;
+    }
+    @include lg {
+      padding: 0;
+    }
+  }
+}
+
+.contactBox {
+  &__when {
+    margin-top: 120px;
+    margin-bottom: 40px;
+    padding: 46px 146px;
+    @include lg {
+      padding: 42px 10px;
+    }
+    @include sm {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__when-title {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 37px;
+    color: $secondary;
+    text-align: center;
+    @include lg {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}

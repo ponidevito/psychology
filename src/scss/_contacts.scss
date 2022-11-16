@@ -1,0 +1,297 @@
+.section {
+  &__contacts {
+    border-bottom: 2px solid #d3dde6;
+    padding-bottom: 150px;
+    @include lg {
+      padding-bottom: 50px;
+    }
+    @include sm {
+      padding-bottom: 35px;
+    }
+  }
+}
+
+.contacts {
+  &__items {
+    margin-bottom: 50px;
+  }
+  &__title {
+    margin-bottom: 80px;
+    @include lg {
+      margin-bottom: 40px;
+    }
+    @include sm {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    &.item-contacts {
+      gap: 60px;
+      justify-content: space-between;
+      @include md {
+        gap: 30px;
+      }
+    }
+    @include lg {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__links {
+    background: #f9fafb;
+    flex: 0 1 60%;
+    @media (max-width: 1100px) {
+      flex: 0 1 50%;
+    }
+    @include lg {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__item-location {
+    flex: 0 1 40%;
+    @media (max-width: 1100px) {
+      flex: 0 1 50%;
+    }
+    @include lg {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__item-map {
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0px 0px 400px 0px;
+    @include lg {
+      min-height: 250px;
+    }
+  }
+  &__form-label {
+    flex: 0 1 30%;
+    margin: 0;
+    @include lg {
+      flex: 0 1 46%;
+    }
+    @include md {
+      margin: 0;
+    }
+    @include sm {
+      flex: 1 1 100%;
+    }
+  }
+  &__form-input {
+    width: 100%;
+  }
+
+  &__form-title {
+    font-size: 22px;
+    line-height: 35px;
+    color: $secondary;
+    margin-bottom: 50px;
+    @include lg {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+    @include sm {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &.contacts__form-title-psychology {
+      font-family: "Cormorant";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 58%;
+      color: $secondary;
+      margin-bottom: 75px;
+      @include lg {
+        margin-bottom: 30px;
+        font-size: 40px;
+        line-height: 55%;
+      }
+      @include sm {
+        margin-bottom: 20px;
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+.links {
+  &__contacts {
+    display: flex;
+    gap: 80px;
+    padding: 55px 85px 55px 55px;
+    align-items: center;
+    @media (max-width: 1300px) {
+      padding: 35px;
+      gap: 30px;
+    }
+    @include md {
+      padding: 20px;
+      gap: 60px;
+    }
+    @include sm {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__contacts-list {
+    @include sm {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    @include xs {
+      gap: 10px;
+    }
+  }
+
+  &__contacts-list-item {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+      @media (max-width: 1100px) {
+        margin-bottom: 20px;
+      }
+      @include sm {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__contacts-list-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 35px;
+    color: $secondary;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @include md {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__contacts-list-link {
+    font-size: 22px;
+    line-height: 159%;
+    color: $secondary;
+  }
+}
+
+.link {
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    transition: 0.3s ease;
+
+    &:hover {
+      .link__contacts-icon {
+        rect {
+          fill: $colorblueLight;
+        }
+        .icon-viber {
+          fill: $colorblueLight;
+        }
+        .location-icon {
+          fill: $colorblueLight;
+        }
+      }
+    }
+    svg {
+      transition: 0.3s ease;
+
+      path {
+        transition: 0.3s ease;
+      }
+      rect {
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  &__contacts-text {
+    position: relative;
+    span {
+      font-weight: 700;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: 0;
+      bottom: -10px;
+      width: 0;
+      transform-origin: bottom right;
+      background-color: $colorblueLight;
+      transition: 0.3s ease;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    @media (max-width: 1100px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.form {
+  &__contacts {
+    display: flex;
+    gap: 40px;
+    @media (max-width: 1250px) {
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    @include sm {
+      gap: 10px;
+    }
+  }
+
+  &__contacts-input {
+    flex: 0 1 30%;
+    min-height: 80px;
+    border: 1px solid #99c1e2;
+    border-radius: 150px;
+    justify-content: center;
+    &:not(:last-child) {
+      padding-left: 60px;
+      @media (max-width: 1250px) {
+        padding-left: 40px;
+      }
+    }
+    @media (max-width: 1250px) {
+      min-height: 50px;
+      line-height: 30px;
+      font-size: 16px;
+      flex: 0 1 30%;
+    }
+    @include lg {
+      flex: 0 1 46%;
+    }
+    @include sm {
+      flex: 1 1 100%;
+    }
+    &::placeholder {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 55px;
+      color: #d3dde6;
+      @media (max-width: 1250px) {
+        min-height: 50px;
+        line-height: 30px;
+        font-size: 16px;
+      }
+    }
+  }
+}
